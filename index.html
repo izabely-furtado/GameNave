@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Gamenave by izabely-furtado</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/izabely-furtado/GameNave">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Gamenave</h1>
+            <h2>Trabalho de POO2 - Jogo_Nave - Relatório e Código</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/izabely-furtado/GameNave/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/izabely-furtado/GameNave/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <div>
+Sumário<p></p>
+</div>
+
+<div>
+Projeto:
+ Jogo - Nave. 2<p></p>
+</div>
+
+<div>
+1.      Registro
+ de Alterações: 2<p></p>
+</div>
+
+<div>
+2.      Introdução. 2<p></p>
+</div>
+
+<div>
+3.      Minimundo. 2<p></p>
+</div>
+
+<div>
+4.      Diagramas. 4<p></p>
+</div>
+
+<div>
+4.1.       Diagrama
+ de Classes. 4<p></p>
+</div>
+
+<div>
+4.1.1.        Descrição
+ do diagrama de classe. 4<p></p>
+</div>
+
+<div>
+4.1.2.        Tabela
+ que indica o significado e a necessidade dos atributos. 5<p></p>
+</div>
+
+<div>
+4.1.3.        Tabela
+ que explica as relações entre as classes. 5<p></p>
+</div>
+
+<div>
+4.2.       Diagrama
+ de Composição de Estruturas. 6<p></p>
+</div>
+
+<div>
+5.      Descrição
+ do Cenário e as Futuras Considerações. 6<p></p>
+</div>
+
+<div>
+6.      Plataforma
+ de Implementação. 7<p></p>
+</div>
+
+<div>
+6.1.       Tabela
+ de Ferramentas Utilizadas: 7<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<h1>
+<a id="projeto-jogo---nave" class="anchor" href="#projeto-jogo---nave" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747427">Projeto: Jogo - Nave</a><p></p>
+</h1>
+
+<h2>
+<a id="1-registro-de-alterações-" class="anchor" href="#1-registro-de-altera%C3%A7%C3%B5es-" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747428">1.     Registro de Alterações:</a> <p></p>
+</h2>
+
+<table border="1" cellpadding="0" cellspacing="0">
+ <tbody>
+<tr>
+  <td valign="top" width="80">
+<div>
+<b>Versão</b><p></p>
+</div>
+</td>
+  <td valign="top" width="135">
+<div>
+<b>Responsável</b><p></p>
+</div>
+</td>
+  <td valign="top" width="102">
+<div>
+<b>Data</b><p></p>
+</div>
+</td>
+  <td valign="top" width="284">
+<div>
+<b>Alterações</b><p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="80">
+<div>
+1<p></p>
+</div>
+</td>
+  <td valign="top" width="135">
+<div>
+Izabely Corrêa<p></p>
+</div>
+<div>
+Gislaine Almeida<p></p>
+</div>
+</td>
+  <td valign="top" width="102">
+<div>
+4/10/2015<p></p>
+</div>
+</td>
+  <td valign="top" width="284">
+<div>
+Especificação do Minimundo<p></p>
+</div>
+<div>
+Diagrama de Classes<p></p>
+</div>
+<div>
+Diagrama de Composição<p></p>
+</div>
+<div>
+Testes<p></p>
+</div>
+</td>
+ </tr>
+</tbody>
+</table>
+
+<div>
+<br>
+</div>
+
+<h2>
+<a id="2-introdução" class="anchor" href="#2-introdu%C3%A7%C3%A3o" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747429">2.     Introdução</a><p></p>
+</h2>
+
+<div>
+Este documento apresenta um
+relatório de projeto e engenharia do sistema de um jogo de naves. Este
+documento está organizado da seguinte forma: a seção 3 apresenta a descrição do
+Minimundo, a seção 4 demonstra o diagrama de classes e o de composição de
+estruturas, a seção 5 descreve o cenário e indica as considerações que serão
+levadas em conta para a próxima versão, a seção 6 descreve o motivo e como foi
+definido cada teste criado, a seção 7 apresenta a plataforma de software utilizada
+na implementação do sistema.</div>
+
+<h2>
+<a id="3-minimundo" class="anchor" href="#3-minimundo" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+3.     Minimundo<p></p>
+</h2>
+
+<div>
+A um tempo, em uma galáxia
+muito distante, a desordem se instalou em uma república galáctica, por conta do
+cartel criado pelas empresas mais poderosas dessas galáxia. Tudo estava caro de
+mais, transformando a população em escravos ou mercenários.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Após um tempo, alguns dos
+habitantes estavam começando a enlouquecer por fome ou por ver pessoas que ama
+definhando. Quanto a mente dos líderes, digamos que esses estavam ainda pior,
+por perceberem gradualmente o poder que tinham em mãos.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Esperando resolver a
+situação, os líderes decidiram implantar o medo como tática de contenção,  reservando, assim, um planeta para aprisionar,
+torturar e matar rebeldes.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Dois irmãos humanos, Harleen
+Frances Quinzel (Harley Quinn) e Jack Napier Quinzel (Joker) acabaram vendo sua
+família sendo levada, por isso eles se tornaram insanos. Mesmo só com 12% de um
+plano e uma nave, decidiram juntar um grupo de amigos que possuíam 3 coisas em
+comum: concordavam que 12% era bem melhor 11%, queriam salvar a sua família e
+estavam tranquilamente dispostos a morrer por isso. <p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Mesmo sendo humanos, Harley
+Quinn pode ser considerada uma psiquiatra e neurocientista extremamente
+imprevisível, além de uma estrategista nata, é uma ginasta habilidosa, deixando
+qualquer campeão olímpico no chinelo. Quanto ao seu irmão, que sempre está com
+um sorriso bem aberto no rosto, este é apaixonado por bombas, por isso acabou equipando
+a nave com poder destruidor invejável e construindo mísseis teleguiados e
+inteligentes (que perseguem o inimigo mais forte em campo de batalha).<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+O grupo precisa ter controle
+sobre o que está ocorrendo com a nave em tempo real, como os movimentos possíveis
+pela nave, a velocidade, a localização, a resistência, o dano causado, o poder
+de ataque e em quanto tempo eles podem mandar o próximo míssil. Além disso
+precisa saber a posição das naves mais próximas.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Partindo de uma base secreta,
+a nave rebelde ataca e conquistam sua primeira vitória contra o perverso
+Império Galáctico. Durante a batalha, os espiões rebeldes conseguem roubar as
+táticas usadas por cada tipo de nave, a especificação de cada exército e planos
+secretos da arma decisiva do Império, a Estrela da Morte, uma estação espacial
+blindada com poder suficiente para destruir um planeta por inteiro, como o que
+a  sua família estava.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+O documento que possui as
+táticas informa os movimentos possíveis e estratégias de ataque utilizadas,
+velocidade, resistência, quando vale a carcaça da nave (caso seja explodida) e
+os itens que as naves possuem e que podem ser liberados em campo de batalha.
+Enquanto o documento que possui a especificação dos exércitos, indica o
+conjunto de naves ao qual cada general do cartel tem acesso.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Perseguida pelos sinistros
+agentes do Império, Harley Quinn, se apressa em voltar para casa a bordo de sua
+nave estelar, protegendo os planos roubados que podem salvar sua família e restaurar
+a liberdade na galáxia.</div>
+
+<h2>
+<a id="4-diagramas" class="anchor" href="#4-diagramas" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747431">4.     Diagramas</a><p></p>
+</h2>
+
+<h3>
+<a id="41diagrama-declasses" class="anchor" href="#41diagrama-declasses" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747432">4.1.          
+Diagrama de
+Classes</a><p></p>
+</h3>
+
+<div align="center">
+<img height="477" width="517"><p></p>
+</div>
+
+<h3>
+<a id="411-descrição-dodiagrama-de-classe" class="anchor" href="#411-descri%C3%A7%C3%A3o-dodiagrama-de-classe" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747433">4.1.1.   Descrição do
+diagrama de classe</a><p></p>
+</h3>
+
+<div>
+Uma nave pode ser do
+tipo jogador, que será a nave que o jogador terá controle no jogo, ou tipo
+inimiga, que são as naves que deverão ser combatidas.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Uma nave inimiga
+pode ser uma general ou  subordinado. Uma
+nave general  pode comandar varias nave
+inimiga subordinado.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Cada nave se
+utiliza de uma munição para atacar.  Naves
+se movem e possuem uma resistência e munição. <p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+A classe Nave e Munição ainda
+não estão sendo consideradas ambas como objetos na tela, assim, isso será
+modificado na próxima versão.</div>
+
+<div>
+<br>
+</div>
+
+<h3>
+<a id="412-tabela-que-indica-o-significado-e-a-necessidade-dosatributos" class="anchor" href="#412-tabela-que-indica-o-significado-e-a-necessidade-dosatributos" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747434">4.1.2.     Tabela que indica o significado e a necessidade dos
+atributos</a><p></p>
+</h3>
+
+<table border="1" cellpadding="0" cellspacing="0">
+ <tbody>
+<tr>
+  <td valign="top" width="92">
+<div>
+<b>Classe<p></p></b>
+</div>
+</td>
+  <td valign="top" width="95">
+<div>
+<b>Atributo<p></p></b>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+<b>Significado<p></p></b>
+</div>
+</td>
+ </tr>
+<tr>
+  <td rowspan="5" valign="top" width="92">
+<div>
+<b>Objeto na
+  Tela<p></p></b>
+</div>
+</td>
+  <td valign="top" width="95">
+<div>
+Figura<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Figura que representa o tiro<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="95">
+<div>
+posição<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Refere-se ao local na janela do jogo ao qual a
+  munição estará posicionada<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="95">
+<div>
+velocidade <p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Qual a velocidade a munição ira mover<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="95">
+<div>
+colisão<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Define se houve colisão com alguma nave inimiga ou
+  não.<p></p>
+</div>
+<div>
+Quando ocorre a colisão o valor é setado para True e
+  a(s) nave(s) é(são) explodida(s)<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="95">
+<div>
+Área<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Área ao qual a figura do objeto ocupa no campo<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td rowspan="2" valign="top" width="92">
+<div>
+<b>Resistencia<p></p></b>
+</div>
+</td>
+  <td valign="top" width="95">
+<div>
+esbarrar<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Informa o quanto a nave ainda resiste caso esbarre
+  em outra<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="95">
+<div>
+danoPorTiro<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Informa qual o dano que ela recebe, dado que ela seja
+  atingida por um tiro<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td rowspan="3" valign="top" width="92">
+<div>
+<b>Nave<p></p></b>
+</div>
+</td>
+  <td valign="top" width="95">
+<div>
+Tipo<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Indica o tipo de nave em questão<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="95">
+<div>
+Som<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Som utilizado quando a nave está no jogo<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="95">
+<div>
+Nome<p></p>
+</div>
+</td>
+  <td valign="top" width="429">
+<div>
+Indica o nome daquela nave<p></p>
+</div>
+</td>
+ </tr>
+</tbody>
+</table>
+
+<div>
+<br>
+</div>
+
+<h3>
+<a id="413-tabela-que-explica-as-relações-entre-as-classes" class="anchor" href="#413-tabela-que-explica-as-rela%C3%A7%C3%B5es-entre-as-classes" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+4.1.3.     Tabela que explica as relações entre as classes<p></p>
+</h3>
+
+<table border="1" cellpadding="0" cellspacing="0">
+ <tbody>
+<tr>
+  <td colspan="2" valign="top" width="130">
+<div>
+<b>Classes<p></p></b>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+<b>Motivo da
+  Relação<p></p></b>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+ObjetoNaTela<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+Nave<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+A Nave é um objeto na tela, assim, estende a classe<p></p>
+</div>
+<div>
+A classe ObjetoNaTela é considera como abstrata,
+  assim não pode ser instanciada.<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+ObjetoNaTela<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+Munição<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+Análogo a ObjetoNaTela-Nave<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+Nave<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+Munição<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+A nave possui zero ou mais munições e as utiliza quando
+  necessário<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+Nave<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+Resistencia<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+A nave possui uma determinada resistência em relação
+  ao tiro e a esbarrar em outra nave.<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+Nave<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+Jogador<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+A nave é considerada como uma classe abstrata, não
+  podendo assim ser instanciada. <p></p>
+</div>
+<div>
+Assim, como a nave é de um jogado, é esta classe quem
+  pode ser instanciado com os tributos de nave.<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+Nave<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+Inimigo<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+Análogo a relação Nave-Jogador, no entanto, Inimigo
+  também é considerada uma classe abstrata, não podem também ser instanciada.<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+Inimigo<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+General<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+Análogo a Nave-Jogador<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+Inimigo<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+Subordinado<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+Análogo a Nave-Jogador<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="54">
+<div>
+General<p></p>
+</div>
+</td>
+  <td valign="top" width="76">
+<div>
+Subordinado<p></p>
+</div>
+</td>
+  <td valign="top" width="481">
+<div>
+General comando zero ou mais sibordinados<p></p>
+</div>
+</td>
+ </tr>
+</tbody>
+</table>
+
+<div>
+<br>
+</div>
+
+<p><br clear="all">
+</p>
+
+<p><br></p>
+
+<div>
+<br>
+</div>
+
+<h3>
+<a id="42diagrama-de-composição-de-estruturas" class="anchor" href="#42diagrama-de-composi%C3%A7%C3%A3o-de-estruturas" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747436">4.2.          
+Diagrama de Composição de Estruturas</a><p></p>
+</h3>
+
+<div>
+<img height="312" width="590"><p></p>
+</div>
+
+<div>
+Esse diagrama destina-se a
+descrição dos relacionamentos entre os elementos. Utilizado para descrever a
+colaboração interna de classes, interfaces ou componentes para especificar uma
+funcionalidade. <p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Essa colaboração interna
+começa a se basear no modelo MVC, que se trata de um padrão de arquitetura de
+software que separa a representação da informação da interação do usuário com
+ele. Utilizando-se das ideias centrais por trás do MVC, que são a reusabilidade
+de código e separação de conceitos.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+O modelo consiste nos dados
+da aplicação, regras de negócios, lógica e funções, que nesse caso estão na CamadaDomínioProblema,
+que possui as classes que foram indicadas no diagrama de classes. <p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Uma visão pode ser qualquer
+saída de representação dos dados, que estão na CamadaGestaoDados, como as
+músicas tocadas no jogo e as imagens que demonstram as noves a as munições, por
+exemplo.  Assim como podem ser
+representação de dados que pode se haver uma interação, como botões e janelas,
+que estão na CmadaInteraçãoHumana.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+O controlador faz a mediação
+da entrada, convertendo-a em comandos para o modelo ou visão, estão nesse caso
+na CamadaControleInterface.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Assim, a partir disse a
+camada de aplicação da nave, chama em uma linha a função da CamadaControleInterface  a função que chama o menu inicial. <p></p>
+</div>
+
+<p><br clear="all">
+</p>
+
+<p><br></p>
+
+<div>
+<br>
+</div>
+
+<h2>
+<a id="5-testes" class="anchor" href="#5-testes" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+5.     Testes<p></p>
+</h2>
+
+<div>
+Os testes estão na CamadaTest que verifica a camada de
+domínio do problema, verificando se, tanto a nave quanto a munição obedecem as
+regras de movimentação na tela do jogo.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Testando, assim se a criação da posição, tanto da
+nave, quanto da munição é valida ou inváida, assim testando se o retorno da
+função é a que se espera nas funções cria_posiçcao(pos) em Municao e cria_tiro(pos)
+em Nave. Representado a seguir: <p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<table border="1" cellpadding="0" cellspacing="0">
+ <tbody>
+<tr>
+  <td valign="top" width="611">
+<div>
+def
+  cria_posicao_valido(self):<p></p>
+</div>
+<div>
+        val =
+  100<p></p>
+</div>
+<div>
+       
+  resultado = {"x": val["x"] + 30, "y":
+  val["y"] + 15}<p></p>
+</div>
+<div>
+        self.assertEqual(resultado,
+  Municao.cria_posicao(val))<p></p>
+</div>
+</td>
+  
+ </tr>
+<tr>
+  <td valign="top" width="611">
+<div>
+def
+  cria_posicao_invalid0(self):<p></p>
+</div>
+<div>
+        val =
+  100000<p></p>
+</div>
+<div>
+       
+  resultado = {}<p></p>
+</div>
+<div>
+        self.assertEqual(resultado,
+  Municao.cria_posicao(val))<p></p>
+</div>
+</td>
+  
+ </tr>
+<tr>
+  <td valign="top" width="611">
+<div>
+def
+  cria_tiro_valido(self):<p></p>
+</div>
+<div>
+        val =
+  100<p></p>
+</div>
+<div>
+       
+  resultado = Municao.Municao(val)<p></p>
+</div>
+<div>
+        self.assertEqual(resultado,
+  Nave.cria_tiro(val))<p></p>
+</div>
+</td>
+  
+ </tr>
+<tr>
+  <td valign="top" width="611">
+<div>
+def
+  cria_tiro_invalid0(self):<p></p>
+</div>
+<div>
+        val =
+  100000<p></p>
+</div>
+<div>
+       
+  resultado = "ERRO"<p></p>
+</div>
+<div>
+        self.assertEqual(resultado,
+  Nave.cria_tiro(val))<p></p>
+</div>
+</td>
+  
+ </tr>
+</tbody>
+</table>
+
+<div>
+<br>
+</div>
+
+<div>
+    Descrição do<b> </b>Cenário e as Futuras Considerações<b><p></p></b>
+</div>
+
+<div>
+O software se trata de um
+jogo que tem por objetivo destruir cada um dos generais e seu exército que
+desejar impedir os protagonistas da história a recuperarem a sua família que
+esta sendo aprisionada pelos líderes do cartel da galáxia em que moram. <p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Sendo um jogo, este deve
+guardar as características básicas do jogador, 
+a possibilidade de continuar ou iniciar uma jogada, além de poder
+visualizar o que está ocorrendo conforme os movimentos são executados pelo
+jogador. <p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+A classe Nave e Munição ainda
+não estão sendo consideradas ambas como objetos na tela, assim, isso será
+modificado na próxima versão<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+Assim o volume de dados que
+terão de ser tratados será baixo, mesmo que ocorra um crescimento, os dados que
+terão de ser guardados não são muitos, somente o status da nave e um hanking
+com as melhores jogadas já realizadas nas próximas versões.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+O jogo pretende ser aceito em
+um ambiente portável, por tanto a quantidade de dados armazenada deve ser a
+mínima possível, para poder rodar sem ocupar muito espaço em memória, mas ainda
+sim, sendo um tanto seguro, para que o jogador não possa mudar a sua pontuação
+de propósito.<p></p>
+</div>
+
+<div>
+<br>
+</div>
+
+<div>
+O tempo de resposta é um dos
+elementos mais importante nesse quesito, afinal, esse tipo de jogo normalmente
+envolve muito reflexo do jogador, sendo esse o fator primordial e decisivo para
+a pontuação do mesmo. <p></p>
+</div>
+
+<h2>
+<a id="6-plataforma-de-implementação" class="anchor" href="#6-plataforma-de-implementa%C3%A7%C3%A3o" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747438">6.     Plataforma de Implementação</a><p></p>
+</h2>
+
+<div>
+Na tabela a seguir são
+apresentadas as ferramentas escolhidas e o motivo pelo qual foram escolhidas.</div>
+
+<h3>
+<a id="61tabela-deferramentas-utilizadas" class="anchor" href="#61tabela-deferramentas-utilizadas" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+<a href="https://www.blogger.com/null" name="_Toc431747439">6.1.          
+Tabela de
+Ferramentas Utilizadas:</a><p></p>
+</h3>
+
+<p><br></p>
+
+<table border="1" cellpadding="0" cellspacing="0">
+ <tbody>
+<tr>
+  <td valign="top" width="100">
+<div>
+<b>Ferramenta</b><p></p>
+</div>
+</td>
+  <td valign="top" width="215">
+<div>
+<b>Tipo</b><p></p>
+</div>
+</td>
+  <td valign="top" width="286">
+<div>
+<b>Justificativa</b><p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="100">
+<div>
+Python<p></p>
+</div>
+</td>
+  <td valign="top" width="215">
+<div>
+Linguagem de Programação<p></p>
+</div>
+</td>
+  <td valign="top" width="286">
+<div>
+Possui programação orientada a objeto e costuma
+  facilitar a implementação<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="100">
+<div>
+SqLite<p></p>
+</div>
+</td>
+  <td valign="top" width="215">
+<div>
+SGBD<p></p>
+</div>
+</td>
+  <td valign="top" width="286">
+<div>
+Ocupa menor memória que os demais SGBD conhecidos,
+  como o Postgresql<p></p>
+</div>
+</td>
+ </tr>
+<tr>
+  <td valign="top" width="100">
+<div>
+Pygame<p></p>
+</div>
+</td>
+  <td valign="top" width="215">
+<div>
+Biblioteca de Jogos Multiplataforma<p></p>
+</div>
+</td>
+  <td valign="top" width="286">
+<div>
+Para o jogo poder ser executado em qualquer
+  plataforma e para agilizar o processo de criação do software<p></p>
+</div>
+</td>
+ </tr>
+</tbody>
+</table>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/izabely-furtado">izabely-furtado</a> can be found on <a href="https://github.com/izabely-furtado/GameNave">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
